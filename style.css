@@ -1,0 +1,105 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.line {
+    background-color: darkred;
+    height: 20px;
+}
+
+.Menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.panel {
+
+
+}
+.image {
+    margin-top: 12px;
+    width: 60px;
+    height: 60px;
+}
+
+.name {
+    font-size: 30px;
+    font-family:cursive;
+
+}
+
+.banner {
+    background-image: url("https://zefirka.club/uploads/posts/2022-09/1662224992_1-zefirka-club-p-yeda-na-svetlom-fone-1.jpg");
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6 black;
+    background-position: top center;
+    object-fit: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title {
+    
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: darkred;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 280px;
+    flex-basis: 50px;
+}
+
+.rect:hover {
+    fill: #FFD166;
+}
+
+.social {
+    font-size: 25px;
+    font-family:cursive;
+}
+
+.flogo {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 15rem;
+}
+
+.fname {
+    font-size: 40px;
+    font-family:cursive;
+
+}
+
+.fimage {
+    margin-top: 22px;
+    width: 70px;
+    height: 70px;
+}
+
+.info {
+    position: absolute;
+    right: 20rem;
+}
