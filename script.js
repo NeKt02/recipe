@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${data[i].image}" alt="${data[i].title}">
                 <h2>${data[i].title}</h2>
                 <p>${data[i].translatedsummary.slice(0, 400)}...</p>
-                <button class="button">Show more</button>
+                <button class="button">Показать</button>
             </div>`
 
             let button = cards_container.querySelectorAll(".button")
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <img src="${data[j].image}" alt="${data[j].title}">
                         <h2>${data[j].title}</h2>
                         <p>${data[j].summary}</p>
-                        <button class="back-button">Back</button>
+                        <button class="back-button">Назад</button>
                     </div>`
 
                     for (let k = 0; k < data[j].analyzedInstructions[0].steps.length; k++) {

@@ -108,16 +108,17 @@ a {
     margin-top: 20px;
 }
 .card {
-    width: 300px;
-    height: 500px;
-    background-color: #F4F1DE;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    width: 320px;
+    min-height: 520px;
+    background: #dfdbc9;
+    border-radius: 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    box-sizing: border-box;
 }
+
 
 .card:hover {
     background-color: #E07A5F;
@@ -128,33 +129,32 @@ a {
 
 .card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 340px;
     border-radius: 20px;
 }
 
 .card h2 {
-    font-size: 20px;
-    margin: 10px 0;
     text-align: center;
-    
 }
+
 
 .card p {
-    font-size: 16px;
     text-align: center;
-    flex-grow: 1;
-    
 }
 
+
 .button {
+    margin-top: auto;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
     background-color: #E07A5F;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #C1440E;
 }
 
 .cards-container {
@@ -173,4 +173,59 @@ a {
 
 .hide {
     display: none;
+}
+
+.back-button {
+    background-color: #E07A5F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #C1440E;
+}
+
+.recept-info {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.recept-card {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.recept-card img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.recept-card h2 {
+    text-align: center;
+    font-size: 42px;
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.recept-card .summary {
+    font-size: 20px;
+    line-height: 1.7;
+    background: #faf7ef;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 25px;
 }
