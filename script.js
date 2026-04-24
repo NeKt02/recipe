@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let button = cards_container.querySelectorAll(".button")
             for (let j = 0; j < button.length; j++) {
                 button[j].addEventListener("click", () => {
-
+                    gtag('event', 'button')
                     cards_container.classList.add("hide")
                     recept_info.classList.remove("hide")
                     recept_info.innerHTML = `<div class="recept-card">
