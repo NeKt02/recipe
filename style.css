@@ -69,7 +69,7 @@ a {
 }
 
 .rect:hover {
-    fill: #FFD166;
+    fill: #E07A5F;
 }
 
 .social {
@@ -171,10 +171,6 @@ a {
     padding: 20px;
 }
 
-.hide {
-    display: none;
-}
-
 .back-button {
     background-color: #E07A5F;
     color: white;
@@ -205,7 +201,7 @@ a {
     box-sizing: border-box;
 }
 
-.recept-card img {
+.recept-card .card-img {
     display: block;
     width: 100%;
     max-width: 500px;
@@ -228,4 +224,42 @@ a {
     padding: 20px;
     border-radius: 16px;
     margin-bottom: 25px;
+}
+
+.step-card {
+    background-color: #E07A5F;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+.ingredients {
+    border: 2px solid #E07A5F;
+    border-radius: 15px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.ing-crad {
+    background-color: #e0cdc5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.ingr-img {
+    mix-blend-mode: multiply;
+    border-radius: 15px;
+    width: 80px;
+    height: 80px;
+}
+
+.hide {
+    display: none;
 }

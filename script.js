@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function translateText(safeText) {
         let email = "logikakyiv@gmail.com";
         const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(safeText)}&langpair=en|uk&de=${email}`;
-        
+
         let response = await fetch(url);
         let data = await response.json();
 
@@ -54,20 +54,31 @@ document.addEventListener("DOMContentLoaded", () => {
             let button = cards_container.querySelectorAll(".button")
             for (let j = 0; j < button.length; j++) {
                 button[j].addEventListener("click", () => {
-                    
+
                     cards_container.classList.add("hide")
                     recept_info.classList.remove("hide")
                     recept_info.innerHTML = `<div class="recept-card">
-                        <img src="${data[j].image}" alt="${data[j].title}">
+                        <img class="card-img" src="${data[j].image}" alt="${data[j].title}">
                         <h2>${data[j].title}</h2>
                         <p>${data[j].summary}</p>
                         <button class="back-button">Назад</button>
                     </div>`
+                    let card = recept_info.querySelector(".recept-card")
 
                     for (let k = 0; k < data[j].analyzedInstructions[0].steps.length; k++) {
-                        recept_info.querySelector(".recept-card").innerHTML += `<p>${data[j].analyzedInstructions[0].steps[k].step}</p>`
+                        card.innerHTML += `<div class = "step-card"></div>`
+                        stepCard = card.querySelectorAll(".step-card")
+                        stepCard[k].innerHTML += `<p>${data[j].analyzedInstructions[0].steps[k].step}</p>`
+                        stepCard[k].innerHTML += `<div class="ingredients"></div>`
+                        ingredients = card.querySelectorAll(".ingredients")
+                        for (let m = 0; m < data[j].analyzedInstructions[0].steps[k].ingredients.length; m++) {
+                            ingredients[k].innerHTML += `<div class = "ing-crad"></div>`
+                            ingCard = ingredients[k].querySelectorAll(".ing-crad")
+                            ingCard[m].innerHTML += `<img class = "ingr-img" src="https://spoonacular.com/cdn/ingredients_100x100/${data[j].analyzedInstructions[0].steps[k].ingredients[m].image}" alt="${data[j].analyzedInstructions[0].steps[k].ingredients[m].name}">`
+                            ingCard[m].innerHTML += `<p> ${data[j].analyzedInstructions[0].steps[k].ingredients[m].name}</p>`
+                        }
                     }
-                    
+
                     // Add event listener for back button
                     recept_info.querySelector(".back-button").addEventListener("click", () => {
                         recept_info.classList.add("hide")
@@ -78,5 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-LoadCards()
+    LoadCards()
 });
